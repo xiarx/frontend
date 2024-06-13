@@ -1,0 +1,17 @@
+#index {
+  flex: 1 1 auto;
+  display: flex;
+  position: relative;
+  height: 100%;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+}
