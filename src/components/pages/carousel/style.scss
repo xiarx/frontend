@@ -1,0 +1,55 @@
+#carousel {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+
+  #menu {
+    z-index: 1;
+    background: var(--color-foreground);
+    box-shadow: 0 3px 4px 1px #808080;
+    min-width: 240px;
+
+    .item {
+      padding: 14px 20px;
+      background: #e8e0f0;
+      transition: background-color 0.2s ease-in;
+
+      &:hover,
+      &.active {
+        cursor: pointer;
+        background: #ffffff;
+        color: #706080;
+        box-shadow: inset 2px 2px 2px 0 #808080;
+      }
+    }
+  }
+
+  #images {
+    display: grid;
+    grid-template-rows: calc(50% - 4px) calc(50% - 4px);
+    grid-auto-flow: column;
+    grid-gap: 8px;
+    padding: 8px;
+    overflow-x: auto;
+
+    .image-loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    .image {
+      position: relative;
+      width: 600px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+      }
+    }
+  }
+}
